@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        &Uuml;bung 02 : 1
+    </title>
+    <style>
+        .rs {
+            counter-reset: item
+        }
+
+        .ex {
+            display: block
+        }
+
+        .ex:before {
+            content: counters(item, ".") " ";
+            counter-increment: item
+        }
+        img {
+            border: aquamarine solid 5px;
+        }
+    </style>
+</head>
+<body>
+<h1> Welche HTML Tags kenne ich? </h1>
+<ul>
+    <li>
+        &lt;h1>
+    </li>
+    <li>
+        &lt;p>
+    </li>
+    <li>
+        &lt;a>
+    </li>
+</ul>
+
+<hr>
+<h2>Inhaltsverzeichnis</h2>
+
+<ol class="rs">
+    <li class="ex">
+        HTML
+        <ol class="rs">
+            <li class="ex">
+                Grundger&uuml;st
+            </li>
+            <li class="ex">
+                Unicode
+            </li>
+        </ol>
+    </li>
+    <li class="ex">
+        CSS
+        <ol class="rs">
+            <li class="ex">
+                Syntax
+            </li>
+        </ol>
+    </li>
+    <li class="ex">
+        Javascript
+    </li>
+    <li class="ex">
+        PHP
+    </li>
+</ol>
+<hr>
+<h2>Beschreibungsliste</h2>
+
+<dl>
+    <dt>
+        &lt;p>
+    </dt>
+    <dd>
+        Erzeugt einen neuen Absatz
+    </dd>
+    <dt>
+        &lt;h1>
+    </dt>
+    <dd>
+        Erzeugt eine &Uuml;berschrift erster Ordnung
+            <figure>
+                <img src="img/h1-img.png" alt="h1 Bild">
+                <figcaption>&Uuml;berschrift erster Ordnung</figcaption>
+            </figure>
+        </dd>
+    <dt>
+        &lt;hr>
+    </dt>
+    <dd>
+        Erzeugt eine horizontale Linie
+        <p>
+            <img src="img/hr-img.png" alt="br Bild">
+        </p>
+    </dd>
+</dl>
+
+</body>
+</html>
