@@ -1,0 +1,13 @@
+:root {
+    --akzentfarbe: #333;
+}
+h2 {
+    border: 2px var(--akzentfarbe) solid;
+    color: var(--akzentfarbe);
+    background-color: yellow;
+}
+
+p {
+    border: 2px gray dotted;
+}
+

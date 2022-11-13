@@ -1,0 +1,44 @@
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("../font/open-sans-v34-latin-regular.ttf");
+}
+
+body {
+    font-family: Arial, serif;
+}
+
+
+h1,h2,h3,h4 {
+    font-family: "Times New Roman", serif;
+    height: 40px;
+}
+
+p{
+    height: 20px;
+    font-size: 1em;
+
+    border: 2px gray dotted;
+}
+
+a {
+    height: 40px;
+    font-size: 1.2em;
+
+    text-decoration: none;
+    color: red;
+}
+
+h2 {
+    border: 2px green solid;
+    color: red;
+    background-color: yellow;
+}
+
+li, dt, dd{
+    font-family: "Cascadia Mono", serif;
+}
+
+body{
+    font-family: "Open Sans", serif;
+}
