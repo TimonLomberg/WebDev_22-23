@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Webtechnologien</title>
+  
+  <style media="screen">
+    .container1 {
+    width: 580px;  
+    height:100px;  
+    background-color:#666;;
+    }
+
+    .container2 {
+    position:relative;
+    width: 600px;   
+    background-color:#333;;
+    }
+
+    .container3 {
+    width: 620px;   
+    height:100px; 
+    background-color:#999;;
+    }
+
+
+    [class^="box"] {       
+      height: 100px;
+      width: 100px;     
+    }
+    .box1 {
+        background-color:yellowgreen;
+        position: sticky;
+        left: 0;
+        right: 0;
+    }
+    .box2 { 
+      background-color:red; 
+      
+      
+    }
+    .box3 { background-color:blueviolet;}
+    .box4 { background-color:cyan;}
+
+    .box-ex:nth-child(odd) {
+        background-color: lightblue;
+
+    }
+    .box-ex:nth-child(even) {
+        background-color: darkblue;
+        color: white;
+
+    }
+
+    [class^="box"]:not(.box1) {
+        position: relative;
+        left: 100px;
+    }
+    .box1{
+        position: fixed;
+    }
+
+  </style>
+</head>
+<body>
+    <div class="container1">Container 1</div>
+    <div class="container2">
+        <div class="box1">BOX1</div>
+        <div class="box2">BOX2</div>
+        <div class="box3">BOX3</div>
+        <div class="box4">BOX4</div>
+        <div class="box-ex">BOX5</div>
+        <div class="box-ex">BOX6</div>
+        <div class="box-ex">BOX7</div>
+        <div class="box-ex">BOX8</div>
+        <div class="box-ex">BOX9</div>
+        <div class="box-ex">BOX10</div>
+    </div>
+    <div class="container3">Container 3</div>
+</body>
+</html>
