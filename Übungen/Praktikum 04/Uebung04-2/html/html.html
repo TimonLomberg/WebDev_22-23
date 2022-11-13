@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Webtechnologien</title>
+  <style media="screen">
+    .site-header {background-color: fuchsia;}
+    .site-footer {background-color:burlywood;}
+    nav {background-color: aqua;padding:10px;}
+    header {background-color: red;}
+    main {background-color: green;}
+    footer {background-color: blue;}
+    article {background-color: yellow;padding:10px;margin: 10px;}
+    section {background-color: white;}
+    aside {background-color: purple; color:white;}
+
+  </style>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <h1>Alles über HTML</h1>
+    <ul>
+      <li><a href="../index.html">Startseite</a></li>
+      <li><a href="html/html.html">Alles über HTML</a></li>
+      <li><a href="html/css.html">Alles über CSSL</a></li>
+      <li><a href="html/javascript.html">Javascript</a></li>
+      <li><a href="html/php.html">Alles über PHP</a></li>
+      <li><a href="html/kontakt.html">Kontakt </a></li>
+    </ul>
+
+  </header>
+
+  <main>
+    <nav>
+      <ul>
+        <li><a href="#Syntax">Syntax</a></li>
+        <li><a href="#Grundgeruest">Grundgerüst</a></li>
+        <li><a href="#Kopf">Angaben im Kopf</a></li>
+        <li><a href="#HTML-Elemente">HTML-Elemente</a></li>
+        <li><a href="#Links">Links</a></li>
+      </ul>
+    </nav>
+    <article class="" id="Syntax">
+      <h2>Syntax</h2>
+      <p>Dem Text wird durch Auszeichnungen (ELEMENTEN) von Textteilen eine Struktur gegeben.<br>
+        Die meisten HTML-Elemente werden durch ein Tag-Paar (Anfang / Ende) markiert.<br>
+        Das Anfangstag beginnt mit &lt; kann optional Attribute enthalten und endet mit &gt;, das Ende-Tag beginnt mit &lt;/ und endet mit &gt;
+        Beispiel: &lt;p&gt;Ein neuer Absatz&lt;/p&gt;
+
+        Neben Elementen mit Start- und Endtag gibt es in HTML auch inhaltsleere Elemente.
+
+        Beispiel: &lt;br&gt;
+
+    </article>
+    <article class="" id="Grundgeruest">
+      <h2>HTML Grundgerüst</h2>
+      <p> Das HTML Grundgerüst sieht folgendermassen aus (hier als Beispiel mit zusättzlich zwei Absätzen):</p>
+      <figure>
+        <img alt="Grundgerüst HTML" src="../bilder/grundgeruest.png" width="" height=""></img>
+        <figcaption>Grunbdgerüst</figcaption>
+      </figure>
+      <p>Eine HTML-Seite ist in "head" und "body" unterteilt, wobei der "head" die nicht sichtbaten Teile wie z.B. Meta-Angaben enthält (s.u.)
+      </p>
+    </article>
+
+    <article class="" id="kopf">
+      <h2>Angaben im Kopf der HTML-Datei</h2>
+
+    </article>
+
+
+
+    <article class="" id="HTML-Elemente">
+      <h2>HTML-Elemente</h2>
+      <p>Einige ausgewählte HTML-Elemente</p>
+      <section>
+        <h3>Absatz</h3>
+        <p>p : paragraph - Absatz</p>
+        <p>Die meisten BVrowser zeigen einen Absatz mit diesen Werten an: </p>
+          <ul>
+            <li>display: block;</li>
+            <li>margin-top: 1em;</li>
+            <li>margin-bottom: 1em;</li>
+            <li>margin-left: 0;</li>
+            <li>margin-right: 0;</li>
+          </ul>
+      </section>
+      <section>
+        <h3>Umbruch</h3>
+        <p>br : break - Zeilenumbruch</p>
+        <p>erzeugt einen Zeilenumbruch </p>
+      </section>
+
+    <a href="#top">nach oben</a>
+    </article>
+
+    <article class="" id="Links">
+      <h2>Links</h2>
+      <p>Links</p>
+
+    </article>
+
+</main>
+
+  <aside class="">
+    <p>Zusatzinformtionen, die man auch weg lassen könnte, z.B. Werbung (muss nicht seitlich stehen)</p>
+  </aside>
+
+  <footer class="site-footer" id="fuss">
+    <p>Fuß der Seite mit Kontaktinfos etc.</p>
+  </footer>
+</body>
+</html>

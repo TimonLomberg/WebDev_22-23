@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>Webtechnologien</title>
+
+    <style>
+        main p {
+            color: green;
+        }
+        #box1 > p {
+            background-color: lightgray;
+        }
+        #box2 > p:nth-of-type(1) {
+            background-color: darkgray;
+        }
+        #box3 > h3 ~ p{
+            border: black 2px solid;
+        }
+        nav a {
+            background-color: black;
+            color: white;
+        }
+    </style>
+
+</head>
+<body>
+<header class="site-header">
+    <h1>Header des Dokuments</h1>
+    <nav>
+        <ul>
+            <li><a href="html/kontakt.html">Kontakt </a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <article id="art1">
+        <h2>Verschiedene Boxen mit div:</h2>
+        <div id="box1">
+            <h3>BOX1</h3>
+            <p>Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. </p>
+            <p>Abgeschieden wohnen sie in Buchstabhausen an der Küste des Semantik, eines großen Sprachozeans. Ein
+                kleines Bächlein namens Duden fließt durch ihren Ort und versorgt sie mit den nötigen Regelialien.</p>
+            <span>Dieser Text stet nicht in einem Absatz</span>
+        </div>
+        <h2>Weitere Boxen mit div:</h2>
+        <div id="box2">
+            <h3>BOX2</h3>
+            <p> Es ist ein paradiesmatisches Land, in dem einem gebratene Satzteile in den Mund fliegen. Nicht einmal
+                von der allmächtigen Interpunktion werden die Blindtexte beherrscht – ein geradezu unorthographisches
+                Leben.</p>
+            <p> Eines Tages eine kleine Zeile Blindtext, ihr Name war Lorem Ipsum, hinaus zu gehen in die weite
+                Grammatik. Der große Oxmox riet ihr davon ab, da es dort wimmele von bösen Kommata, wilden Fragezeichen
+                und hinterhältigen Semikoli, doch das Blindtextchen ließ sich nicht beirren. Es packte seine sieben
+                Versalien, schob sich sein Initial in den Gürtel und machte sich auf den Weg.</p>
+            <span>Dieser Text stet nicht in einem Absatz</span>
+        </div>
+        <div id="box3">
+            <h3>BOX2</h3>
+            <p> Es ist ein paradiesmatisches Land, in dem einem gebratene Satzteile in den Mund fliegen. Nicht einmal
+                von der allmächtigen Interpunktion werden die Blindtexte beherrscht – ein geradezu unorthographisches
+                Leben.</p>
+            <p> Eines Tages eine kleine Zeile Blindtext, ihr Name war Lorem Ipsum, hinaus zu gehen in die weite
+                Grammatik. Der große Oxmox riet ihr davon ab, da es dort wimmele von bösen Kommata, wilden Fragezeichen
+                und hinterhältigen Semikoli, doch das Blindtextchen ließ sich nicht beirren. Es packte seine sieben
+                Versalien, schob sich sein Initial in den Gürtel und machte sich auf den Weg.</p>
+            <span>Dieser Text stet nicht in einem Absatz</span>
+        </div>
+
+    </article>
+</main>
+<footer>
+    <p>Fuß der Seite mit <a href="#">Kontaktinfos</a> etc.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,111 @@
+/*   1   */
+* {
+    font-family: Arial, serif;
+}
+
+
+/*   2   */
+div, header, main, footer, article, nav {
+    border: black 2px solid;
+}
+
+a {
+    padding: 0 0.5em;
+    text-decoration: none;
+}
+
+
+/*   3   */
+#box1{
+    background-color: rgb(19, 19, 19);
+}
+#box2{
+    background-color: rgb(82, 82, 82);
+}
+#box3{
+    background-color: rgb(192, 192, 192);
+}
+
+
+/*   4   */
+.text-weiss{
+    color: white;
+}
+
+
+/*   5   */
+div.text-fett {
+    font-weight: bold;
+}
+
+
+/*   6   */
+a[href="#"] {
+    background-color: blue;
+    color: white;
+}
+
+
+/*   7   */
+a:not(nav *), a:not(nav *):visited {
+    background-color: blue;
+    color: white;
+}
+
+a[href="#top"]:not(nav *){
+    background-color: green;
+}
+
+a:not(nav *):hover {
+    text-decoration: underline;
+}
+
+
+/*   8   */
+a[href="#top"]::after {
+    content: "⇑";
+}
+
+
+/*   9   */
+a[href*="/"]:not(nav *)::after {
+    content: " (intern)";
+}
+
+a[href^="http"]::after {
+    content: " (extern)";
+}
+
+
+/*   10  */
+nav li {
+    display: inline-block;
+}
+nav a{
+    background-color: rgb(20,20,20);
+    color: white;
+    padding: 0.5em;
+    text-decoration: none;
+}
+nav a:hover{
+    background-color: white;
+    color: rgb(20,20,20);
+}
+
+
+/*   11  */
+td {
+    padding: 3px;
+}
+tr:nth-child(odd) {
+    background-color: lightgray;
+}
+
+tr:nth-child(even) {
+    background-color: darkgray;
+}
+th {
+    background-color: purple;
+    color: white;
+    padding: 3px;
+}
