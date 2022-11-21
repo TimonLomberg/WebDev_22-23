@@ -1,0 +1,120 @@
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("../font/open-sans-v34-latin-regular.ttf");
+}
+
+:root {
+    --bg-color: rgb(20,20,20);
+    --el-color: rgba(255,255,255,10%);
+    --el-radius: 5px;
+    --nel-color: rgba(0,0,0,20%);
+}
+
+
+html, body {
+    font-family: "Open Sans", Arial, serif;
+    background-color: var(--bg-color);
+    color: white;
+    overflow-x: hidden;
+    margin: 10px;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+body > *{
+    flex-grow: 4;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+#top {
+    display: flex;
+    height: 200px;
+    background-color: var(--el-color);
+    align-items: center;
+    font-size: 1vw;
+    border-radius: var(--el-radius);
+    width: 100vw;
+}
+#top h1 {
+    margin-left: 5%;
+    flex-grow: 1;
+    font-size: 8em;
+    font-weight: bold;
+    color: rgb(245, 74, 0);
+}
+nav {
+    flex-grow: 3;
+    height: 100%;
+    //background-color: blue;
+}
+nav ul {
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+    margin: 0 5% 0 0;
+    gap: 10px;
+    //background-color: green;
+}
+nav li {
+    text-align: center;
+    height: 50%;
+    border-radius: 10px;
+    list-style: none;
+    flex-grow: 1;
+    background-color: var(--el-color);
+
+}
+nav a {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    //background-color: yellow;
+    align-items: center;
+    text-align: center;
+}
+
+nav div {
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+}
+
+
+article, aside{
+    background-color: var(--el-color);
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: var(--el-radius);
+    flex-grow: 1;
+}
+
+article {
+    margin: 10px;
+}
+
+article h2 {
+    background-color: var(--el-color);
+    padding: 10px;
+    border-radius: var(--el-radius);
+}
+
+#grun p:not(#grun header *){
+    padding-left: 20px;
+}
+
+footer a{
+    display: block;
+    text-align: center;
+    background-color: var(--nel-color);
+    border-radius: var(--el-radius);
+    width: 100vw;
+}
