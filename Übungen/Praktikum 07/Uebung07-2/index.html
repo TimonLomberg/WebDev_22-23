@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>&Uuml;bung07-2</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        let isToggle = false;
+        function OnClick(button) {
+            let img = document.getElementById("logo");
+
+            switch (button) {
+                case 1:
+                    img.setAttribute("src", "img/HSHL_Logo_horizontal_RGB_blue_green_2016_09_28_mit_Schutzraum.jpg");
+                    break;
+                case 2:
+                    img.setAttribute("src", "img/HSHL_Logo_horizontal_RGB_blue_yellow_2016_09_28_mit_Schutzraum.jpg");
+                    break;
+                case 3:
+                    if(!isToggle) {
+                        img.setAttribute("src", "img/HSHL_Logo_horizontal_RGB_blue_yellow_2016_09_28_mit_Schutzraum.jpg");
+                    } else {
+                        img.setAttribute("src", "img/HSHL_Logo_horizontal_RGB_blue_green_2016_09_28_mit_Schutzraum.jpg");
+                    }
+                    isToggle = !isToggle;
+                    break;
+                default:
+                    return;
+            }
+        }
+    </script>
+</head>
+<body>
+<main>
+    <img id="logo" src="img/HSHL_Logo_horizontal_RGB_blue_yellow_2016_09_28_mit_Schutzraum.jpg" alt="HSHL Logo">
+    <a href="javascript:OnClick(1)">
+        <div>
+            1
+        </div>
+    </a>
+    <a href="javascript:OnClick(2)">
+        <div>
+            2
+        </div>
+    </a>
+    <a href="javascript:OnClick(3)">
+        <div class="stretch-button">
+            Toggle
+        </div>
+    </a>
+
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>Webtechnologien</title>
+
+    <style media="screen">
+        .hell {
+            background-color: white;
+        }
+
+        .dunkel {
+            background-color: #aaa;
+        }
+
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("flaeche").addEventListener("mouseover", roteBox);
+            halloText = document.getElementById("stringtest");
+            document.getElementById("btnChange").addEventListener("click", changeText);
+            document.getElementById("btnCalc1").addEventListener("click", laenge);
+            document.getElementById("btnCalc2").addEventListener("click", worldPos);
+            document.getElementById("btnCalc3").addEventListener("click", indexPos);
+            h2Ele = document.getElementsByTagName("h2")[0];
+            document.getElementById("btnStyle1").addEventListener("click", styleChange);
+            feld1 = document.getElementById("zahl1");
+            feld2 = document.getElementById("zahl2");
+            feld3 = document.getElementById("summe");
+
+
+        });
+
+        //alert("Herzlich Wilkommen");
+
+        let isClick = false;
+        let halloText;
+        let h2Ele;
+
+        let feld1;
+        let feld2;
+        let feld3;
+
+        function roteBox() {
+            alert("Ich wusste es!");
+        }
+
+        function changeText() {
+            if (!isClick) {
+                halloText.innerHTML = "Hallo World";
+            } else {
+                halloText.innerHTML = "Hallo Welt";
+            }
+            isClick = !isClick;
+        }
+
+        function laenge() {
+            alert("Der Text hat " + halloText.innerHTML.length + " Zeichen.");
+        }
+
+        function worldPos() {
+            let pos = halloText.innerHTML.indexOf("World");
+            if (pos >= 0) {
+                alert("Das Wort \"World\" ist an Zeichen " + (pos + 1) + ".");
+            } else {
+                alert("Das Wort \"World\" ist nicht vorhanden.");
+            }
+        }
+
+        function indexPos() {
+            console.log("Hello World".at(6));
+        }
+
+        function styleChange() {
+            h2Ele.className = "dunkel";
+        }
+
+        function feldBerchnen(val1, val2, retRef) {
+            retRef.val = (val1 + val2);
+        }
+
+        function ausgabe() {
+            let obj = {
+                val: 0
+            }
+            feldBerchnen(parseInt(feld1.value), parseInt(feld2.value), obj);
+
+            feld3.value = obj.val;
+        }
+
+    </script>
+
+    <script defer>
+        //alert("Seite geladen");
+    </script>
+
+
+</head>
+<body>
+<h1>Javascipt</h1>
+<h2>ALERT Meldung</h2>
+<button onclick="alert('Alarmfenster');">ALERT</button>
+<br>
+<h2>BITTE DEN ROTEN BEREICH NICHT BERÜHREN!</h2>
+<div id="flaeche" style="height:200px; background-color:red;"></div>
+<h2>Strings</h2>
+<p id="stringtest">Hallo Welt</p>
+<button id="btnChange">Text Ersetzen</button>
+<br>
+<p>Der Text hat <span id="pErgebnis1"></span></p>
+<button id="btnCalc1">Text Länge</button>
+<br>
+<p>Das Wort "World"<span id="pErgebnis2"></span></p>
+<button id="btnCalc2">Startposition von World</button>
+<br>
+<p>Das siebte Zeichen aus dem String in der Console ausgeben</p>
+<button id="btnCalc3">Console</button>
+<br>
+<hr>
+<br>
+<h2>KLassen hinzufügen</h2>
+<p>Den Hintergrund der ersten Unterüberschrift (h2) über den Selektor getElementsByTagName ändern, indem die Klasse
+    "dunkel" hinzugefügt wird</p>
+<button id="btnStyle1">Hintergrund ändern</button>
+<br>
+<h2>Funktion Addition</h2>
+<input type="number" id="zahl1"><br>
+<input type="number" id="zahl2"><br>
+<input type="number" id="summe"><br>
+<button onclick="ausgabe()">Berechne</button>
+<br>
+
+
+<script>
+
+
+</script>
+
+</body>
+</html>
