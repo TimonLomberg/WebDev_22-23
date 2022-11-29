@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Webtechnologien</title>
+  
+  <style media="screen">
+    table,td,th {
+      border: 1px solid black;
+    }
+    table {
+      border-collapse: collapse;
+    }
+    td {
+      width:5em;
+      padding: 0.2em;
+    }
+    .rot {
+      background-color: red;
+    }
+    .hellblau {
+      background-color: lightblue;
+    }
+    .hellgruen {
+      background-color: lightgreen;
+    }
+    .gelb {
+      background-color: yellow;
+    }
+    .rahmen {
+      border: 1px dashed black;
+      width:5em;
+      padding:0.2em;
+    }
+  
+  </style>
+
+  <script src="js/scripts.js"></script>
+
+</head>
+<body>   
+<h1>************** Übung 8 **********************</h1>
+<!--*************************************************************-->
+<div id="u8-1">
+<h2>************* Selektion von DOM Elementen Übung 8-1</h2>
+
+  <p class="rot">Erster Absatz</p>
+  <button name="aendern">TextfarbeGelb</button>
+  <p class="hellblau">Zweiter Absatz</p>
+  <button name="aendern">Klasse ändern</button>
+  <p class="hellgruen">Dritter Absatz</p>
+  <button name="aendern">Klasse ändern</button>
+  <ul>
+    <li>Element1</li>
+    <li>Element2</li>
+    <li>Element3</li>
+    <li>Element4</li>
+    <li>Element5</li>
+  </ul>
+  <button name="aendern">Klasse ändern</button>
+</div>
+
+<!--*************************************************************-->
+
+<div id="u8-2">
+<h2>************* Eigenschhaften von DOM Elementen Übung 8-2 ******************</h2>
+
+  <p>Absatz in Übung 8-2</p>
+  <button name="domEigenschaften">DOM Eigenschaften</button>  
+  <ul id="Liste2">
+    <li>Listenelement 1</li>
+    <li>Listenelement 2</li>
+    <li>Listenelement 3</li>
+  </ul>
+  <button name="domEigenschaften">Knoten hinzufügen</button>
+</div>
+
+ <!--*************************************************************-->
+
+<div id="u8-3">
+  <h2>************* Programmsteuerung Übung 8-3 ******************</h2> 
+  <p>Taschenrechner</p>
+    <input type="number" step="any" id="wert1">
+    <select id="operator" name="operator">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+    </select>
+    <input type="number" step="any" id="wert2">
+    <button id="berechne">Berechne</button>
+  <!--  <input type="number" step="any" id="wertAusgabe"> -->
+  <output id="wertAusgabe"></output>
+</div>
+
+ <!--*************************************************************-->
+
+
+<div id="u8-4">
+ <h2>************* Schleifen und Array Übung 8-4 ****** ************</h2>  
+  <p>Stundenplan</p>
+  <button name="schleifen">Tabelle erstellen</button>
+  <div id="stundenplan"></div>
+</div>
+
+  <!--*************************************************************-->
+
+
+<div id="u8-5">
+  <h2>************* Klassen in Javascript Übung 8-5 ******************</h2>
+
+
+    <h3>KREIS</h3>
+    <label for="eingabe">Eingabe</label>
+    <input type="number" step="any" id="eingabe">
+    <button id="umfang">Berechne Umfang</button>
+    <p id="umfangAusgabe">UMFANG?</p>
+    <br>
+    <h3>RECHTECK</h3>
+    <label for="eingabeX">Eingabe X</label>
+    <input type="number" step="any" id="eingabeX">
+    <label for="eingabeY">Eingabe Y</label>
+    <input type="number" step="any" id="eingabeY">
+    <button id="flaeche">Berechne Fläche</button>
+    <p id="flaecheAusgabe">Fläche Rechteck?</p>
+    <br>
+    <br>
+</div>
+
+  <!--*************************************************************-->
+
+<div id="u8-6">
+    <h2>************* Local Storage Javascript Übung 8-6 ******************</h2>
+    <p>Sie haben diese Seite <span id="zaehler">1</span> mal aufgerufen</p>
+    <button id="reset">Zähler zurück setzen</button>
+</div>
+</body> 
+</html>
