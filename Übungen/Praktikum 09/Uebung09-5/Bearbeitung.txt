@@ -1,0 +1,8 @@
+- Passende Felder benutzen
+- Richtige Feld Länge
+- Nur notwendige Informationen abfragen
+- Zwingend erforderliche Felder klar markieren
+- Passend beschreibende label benutzen
+- Formatierung automatisch handhaben
+- Informative Fehlermeldungen
+- Auf Accessibility achten

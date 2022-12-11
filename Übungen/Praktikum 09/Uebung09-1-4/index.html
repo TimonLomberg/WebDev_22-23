@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>Webtechnologien</title>
+    <style media="screen">
+
+
+
+        [id="perDaten"] label {
+            display: block;
+            padding: 5px;
+            margin-top: 5px;
+        }
+
+
+    </style>
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+<h1>************** Übung 9 **********************</h1>
+
+<h2>Formular</h2>
+
+<section id="wrapper">
+    <form class="formular" id="bestellung" method="get" action="#">
+        <fieldset id="perDaten">
+            <legend>Persönliche Daten</legend>
+            <label for="benutzerName">Benutzername </label>
+            <input type="text" id="benutzerName" name="benutzerName" minlength="5" size="15" autofocus maxlength="15" required
+                   placeholder="Mustermann" accesskey="b" tabindex="0">
+            <span id="benErr"></span>
+
+            <label for="plz">Postleitzahl </label>
+            <input type="text" id="plz" name="plz" size="5" minlength="5" maxlength="5" pattern="^[0-9]{5}$"
+                   accesskey="p" tabindex="0">
+            <span id="plzErr"></span>
+
+            <label for="email">Email </label>
+            <input type="email" id="email" name="email" size="20" placeholder="someone@example.com" required
+                   accesskey="e" tabindex="0">
+            <span id="emailErr"></span>
+
+            <br><br>
+        </fieldset>
+        <fieldset id="bestell">
+            <legend>Bestellung</legend>
+
+
+            <p>Gericht</p>
+            <input id="pizza" type="radio" name="gericht" value="pizza" checked
+                   accesskey="e" tabindex="0">
+            <label for="pizza">Pizza</label>
+
+            <input id="burger" type="radio" name="gericht" value="burger">
+            <label for="burger">Burger</label>
+
+            <input id="schnitzel" type="radio" name="gericht" value="schnitzel">
+            <label for="schnitzel">Schnitzel</label>
+
+            <input id="doener" type="radio" name="gericht" value="d&ouml;ner">
+            <label for="doener">Döner</label>
+
+            <p>Extra Getränk</p>
+
+            <input type="checkbox" id="cola" name="getr&auml;nk" value="cola">
+            <label for="cola">Cola</label>
+            <input type="checkbox" id="bier" name="getr&auml;nk" value="bier">
+            <label for="bier">Bier</label>
+            <input type="checkbox" id="wein" name="getr&auml;nk" value="wein">
+            <label for="wein">Wein</label>
+            <br><br>
+
+            <label for="extras">Andere Extras</label>
+            <br><br>
+            <select id="extras" name="extras" multiple>
+                <option value="kerzen">Kerzen</option>
+                <option value="blumen">Blumen</option>
+                <option value="schokolade">Schokolade</option>
+                <option value="ballons">Ballons</option>
+            </select>
+            <br><br>
+
+        </fieldset>
+
+        <fieldset id="datum">
+            <legend>Datum</legend>
+
+            <br>
+            <label for="uhrzeit">Uhrzeit</label>
+            <br><br>
+            <input id="uhrzeit" type="time" list="zeiten" name="uhrzeit" required>
+            <datalist id="zeiten">
+                <option value="16:00">
+                <option value="17:00">
+                <option value="18:00">
+                <option value="19:00">
+                <option value="20:00">
+            </datalist>
+            <br><br>
+
+            <label for="bestelldatum">Datum</label>
+            <br><br>
+            <input type="date" id="bestelldatum" name="datum" required>
+            <br><br>
+        </fieldset>
+
+        <br>
+        <input type="submit" id="abschicken" value="Bestellung abschicken">
+
+
+    </form>
+
+</section>
+<script src="js/scripts.js"></script>
+</body>
+</html>
