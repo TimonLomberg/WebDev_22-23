@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+* :not(.text, .text-rec *) {
+    font-size: 0;
+}
+
+.text, .text-rec *{
+    font-size: 1rem;
+}
+
+:root {
+
+
+    --bg-color: rgb(20, 20, 20);
+    --accent-color: 37, 182, 0;
+    --h2-font-color: rgb(199, 199, 199);
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.testing {
+    background-color: #333333;
+    border: 2px black solid;
+}
+
+body {
+    height: 100vh;
+
+    background-color: var(--bg-color);
+}
+
+
+
+
+.golden-horizontal-big {
+    width: 62%;
+}
+
+.golden-horizontal-small {
+    flex-grow: 1;
+}
+
+.fill-v {
+    height: 100%;
+    display: inline-block;
+}
+
+.fill-h {
+    width: 100%;
+    display: inline-block;
+}
+
+
