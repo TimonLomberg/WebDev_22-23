@@ -10,6 +10,7 @@
 body {
     display: flex;
     flex-flow: column nowrap;
+    overflow: hidden;
 }
 
 #services-header {
@@ -50,10 +51,13 @@ body {
 }
 
 .service-category {
+    position: relative;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: space-evenly;
+
+    overflow-x: clip;
 
     min-width: 12%;
     margin: 0 1rem 0 1rem;
@@ -61,47 +65,47 @@ body {
 
     border-radius: 3rem;
 
-    transition: flex-grow 400ms ease-in-out, min-width 300ms ease-in-out;
+    transition: flex-grow 400ms ease-in-out, min-width 300ms ease-in-out;;
 }
 
 .service-category-image {
     height: 61.8%;
 
+
+
     width: var(--small-img-width);
 
-    transition: width 300ms ease-in-out;
 
+    transition: width 300ms ease-in-out, flex-grow 300ms ease-in-out, min-width 300ms ease-in-out;
 
-
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
 }
 
-
-
 .service-image-small {
-    position: relative;
 
-    left: calc(50% - var(--small-img-width) / 2);
-    top: calc(50% - var(--small-img-width) / 2);
 }
 
 .service-image-big {
-    position: relative;
 
-    left: calc(50% - var(--big-img-width) / 2);
-    top: calc(50% - var(--big-img-width) / 2);
+    margin: auto;
+    transition: visibility 300ms ease-in-out, width 300ms ease-in-out;
 }
 
 
 
 .service-article {
+
     height: 100%;
-    width: 60%;
+    width: 50vw;
 
     padding: 5% 0 5% 0;
 
     visibility: visible;
     opacity: 100%;
-    transition: opacity 300ms ease-in-out, visibility 300ms ease-in-out;
+    transition: opacity 300ms ease-in-out, visibility 300ms ease-in-out, width 300ms ease-in-out;
 
     display: flex;
     flex-direction: column;
@@ -128,9 +132,21 @@ body {
 
 .service-category[data-selected="false"] .service-article{
     visibility: collapse;
-    display: none;
+    position: absolute;
+    width: 0;
+
+    height: calc(100% - 8vh);
     opacity: 0;
 }
+
+.service-category[data-selected="false"] .service-image-big{
+    visibility: collapse;
+    position: absolute;
+
+    height: calc(100% - 8vh);
+    opacity: 0;
+}
+
 
 #services-main[data-any-selected="true"] .service-category[data-selected="false"]{
     min-width: 8%;
@@ -167,7 +183,9 @@ body {
 
 .service-category[data-selected="true"] .service-image-small, .service-category[data-selected="false"] .service-image-big{
     width: 0;
+    visibility: collapse;
 }
 .service-category[data-selected="true"] .service-image-big, .service-category[data-selected="false"] .service-image-small{
-    width: inherit;
+    width: 100%;
+    height: auto;
 }
