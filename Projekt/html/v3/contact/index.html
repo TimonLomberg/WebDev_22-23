@@ -1,43 +1,105 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Kontakt</title>
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Kontakt</title>
 
-  <link rel="stylesheet" href="../../../css/v3/style.css">
+		<link rel="stylesheet" href="../../../css/v3/style.css" />
+		<link rel="stylesheet" href="../../../css/v3/contact.css" />
+	</head>
+	<body>
+		<!-- Logo and title region -->
+		<header class="testing text" id="head">HEADER</header>
 
-</head>
-<body>
+		<!-- Center main region -->
+		<main id="contact">
+			<!-- Article for additional contact information -->
+			<article id="info" class="text-rec testing">
+				<header>
+					<h2>Nehmen Sie mit uns Kontakt auf</h2>
+				</header>
+				<p>PLATZHALTER PLATZHALTER PLATZHALTER PLATZHALTER 1</p>
+			</article>
+			<!-- Contact form region -->
+			<form id="contact-form" method="post" class="text-rec testing">
+				<h2 id="form-head" class="fill-h">Jetzt Kontakt Aufnehmen</h2>
 
-<header class="testing">
+				<!-- Name filedset -->
+				<fieldset class="form-seg">
+					<div>
+						<label for="addr">Anrede</label><span class="req"> *</span><br />
+						<input type="text" id="addr" name="surname" size="6" required />
+					</div>
+					<div>
+						<label for="name">Vorname</label><span class="req"> *</span><br />
+						<input type="text" id="name" name="name" size="12" required />
+					</div>
+					<div>
+						<label for="surname">Nachname</label><span class="req"> *</span
+						><br />
+						<input type="text" id="surname" name="surname" size="12" required />
+					</div>
+				</fieldset>
 
-</header>
+				<!-- Context fieledset -->
+				<fieldset class="form-seg">
+					<div>
+						<label for="org">Einrichtung</label><span class="req"> *</span
+						><br />
+						<select id="org" name="org" required>
+							<option value="company">Unternehmen</option>
+							<option value="authority">Öffentliche Behörde</option>
+							<option value="org">Hilfsorganisation</option>
+							<option value="ind">Privatperson</option>
+						</select>
+					</div>
+					<div>
+						<label for="email">E-Mail Adresse</label><span class="req"> *</span
+						><br />
+						<input type="email" id="email" name="email" required />
+					</div>
+				</fieldset>
 
-<main id="contact">
-  <article class="text-rec testing">
-    <header>
-      <h2>Nehmen Sie mit uns Kontakt auf</h2>
-    </header>
-    <p>PLATZHALTER PLATZHALTER PLATZHALTER PLATZHALTER </p>
-  </article>
-  <form id="contact-form" method="post" class="text-rec testing">
-    <label for="email">E-Mail Adresse</label><br>
-    <input type="email" id="email" name="email"><br>
+				<!-- Content fieledset -->
+				<div class="fill-h">
+					<label for="subj">Betreff</label><span class="req"> *</span><br />
+					<input type="text" id="subj" name="subject" required /><br />
+				</div>
 
-    <label for="subj">Betreff</label><br>
-    <input type="text" id="subj" name="subject"><br>
+				<div class="fill-h">
+					<label for="mess">Nachricht</label><span class="req"> *</span><br />
+					<textarea
+						id="mess"
+						name="message"
+						rows="3"
+						cols="20"
+						required></textarea
+					><br />
+				</div>
 
-    <label for="mess">Nachricht</label><br>
-    <input type="text" id="mess" name="message"><br>
-  </form>
-</main>
+				<div class="fill-h">
+					<input type="checkbox" id="newsletter" name="newsletter" />
+					<label for="newsletter"
+						>Ich möchte zukünftlich per E-Mail über Neuigkeiten und Angebote
+						informiert werden.</label
+					>
+				</div>
 
-<footer class="testing">
+				<div class="fill-h">
+					<input type="submit" /><span id="err"
+						>Bitte füllen sie alle erforderlichen Felder aus.</span
+					>
+				</div>
 
-</footer>
+				<p class="fill-h"><span class="req">*</span> -Erforderliches Feld</p>
+			</form>
+		</main>
 
-</body>
+		<!-- Global information region -->
+		<footer class="testing text" id="foot">WaftpOIUHG</footer>
+	</body>
 </html>

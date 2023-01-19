@@ -1,0 +1,144 @@
+:root {
+    font-size: min(max(14px, 1vw), 16px);
+}
+
+/* -- Site Layout Region (top, bottom: 12%; Middle: fill)-- */
+
+body {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+/* Top, bottom */
+#head, #foot {
+    min-height: 12vh;
+}
+
+/* Golden cut left region (fill) */
+#contact {
+    flex-grow: 1;
+    display: flex;   
+}
+
+#contact > *{
+    flex-grow: 1;
+    padding: 1rem;
+}
+
+/* Golden cut right region */
+#contact-form {
+    width: 60.81%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1.5rem 2rem;
+    align-content: flex-start;
+}
+
+
+
+/* -- Input Style Region -- */
+
+#contact-form *:not(.req){
+    font-size: 1.5rem;
+}
+
+.req {
+    color: red;
+    font-size: 1rem;
+}
+
+#form-head {
+    display: block;
+    color: rgb(var(--accent-color));
+}
+
+/* Input element style */
+input, select, option, textarea {
+    background-color: #D9D9D9;
+    color: black;
+    padding: 0.2em;
+    margin-top: 0.2rem;
+}
+
+/* Textlike input border reset */
+input[type="text"], input[type="email"], input[list], select, input[type="submit"], textarea{
+    border: 2px none;
+    border-radius: 6px;
+}
+
+/* Invalid input style */
+input:invalid, textarea:invalid {
+    border: 2px red solid;
+}
+
+/* Textarea resonable size restrictions */
+textarea {
+    max-width: 100%;
+    min-width: 15%;
+    min-height: 2.5rem;
+}
+
+/* Fieldset style and contents management */
+.form-seg {
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    gap: 1rem;
+    border: 2px var(--text-color) solid;
+    border-radius: 8px;
+}
+
+#mess {
+    width: 50%;
+}
+
+#err {
+    display: none;
+    color: red;
+    text-overflow: clip;
+    margin-left: 1rem;
+}
+
+form:invalid #err {
+    display: inline;
+}
+
+
+
+/* -- Site Layout Mobile Region (Fixed header and extra info moved to top) -- */
+
+@media only screen and (max-width: 850px){
+
+    #contact {
+        flex-direction: column;
+        position: relative;
+        top: 12vh;
+    }
+
+    #info {
+        width: 100;
+    }
+
+    #contact-form {
+        width: 100%;
+    }
+
+    #mess {
+        width: 100%;
+    }
+
+    #head {
+        position: fixed;
+        width: 100%;
+        z-index: 100;
+    }
+
+    #foot {
+        position: relative;
+        bottom: -12vh;
+    }
+
+}

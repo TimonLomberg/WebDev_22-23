@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: var(--text-color);
 }
 
 * :not(.text, .text-rec *) {
@@ -14,10 +15,12 @@
 
 :root {
 
-
+    --text-color: white;
     --bg-color: rgb(20, 20, 20);
-    --accent-color: 37, 182, 0;
+    --accent-color: 144, 246, 118;
     --h2-font-color: rgb(199, 199, 199);
+
+    --golden: 60.81%
 }
 
 a {
@@ -40,7 +43,7 @@ body {
 
 
 .golden-horizontal-big {
-    width: 62%;
+    width: var(--golden);
 }
 
 .golden-horizontal-small {
