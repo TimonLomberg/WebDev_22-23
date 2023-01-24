@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta
@@ -10,6 +10,8 @@
 
 		<link rel="stylesheet" href="../../../css/v3/style.css" />
 		<link rel="stylesheet" href="../../../css/v3/contact.css" />
+
+		<script src="../../../js/localization.js"></script>
 	</head>
 	<body>
 		<!-- Logo and title region -->
@@ -20,27 +22,29 @@
 			<!-- Article for additional contact information -->
 			<article id="info" class="text-rec testing">
 				<header>
-					<h2>Nehmen Sie mit uns Kontakt auf</h2>
+					<h2>{{contact.info.title}}</h2>
 				</header>
-				<p>PLATZHALTER PLATZHALTER PLATZHALTER PLATZHALTER 1</p>
+				<p>{{contact.info.text}}</p>
 			</article>
 			<!-- Contact form region -->
 			<form id="contact-form" method="post" class="text-rec testing">
-				<h2 id="form-head" class="fill-h">Jetzt Kontakt Aufnehmen</h2>
+				<h2 id="form-head" class="fill-h">{{contact.form.title}}</h2>
 
 				<!-- Name filedset -->
 				<fieldset class="form-seg">
 					<div>
-						<label for="addr">Anrede</label><span class="req"> *</span><br />
-						<input type="text" id="addr" name="surname" size="6" required />
+						<label for="addr">{{contact.form.addr}}</label
+						><span class="req"> *</span><br />
+						<input type="text" id="addr" name="addr" size="6" required />
 					</div>
 					<div>
-						<label for="name">Vorname</label><span class="req"> *</span><br />
+						<label for="name">{{contact.form.name}}</label
+						><span class="req"> *</span><br />
 						<input type="text" id="name" name="name" size="12" required />
 					</div>
 					<div>
-						<label for="surname">Nachname</label><span class="req"> *</span
-						><br />
+						<label for="surname">{{contact.form.surname}}</label
+						><span class="req"> *</span><br />
 						<input type="text" id="surname" name="surname" size="12" required />
 					</div>
 				</fieldset>
@@ -48,30 +52,40 @@
 				<!-- Context fieledset -->
 				<fieldset class="form-seg">
 					<div>
-						<label for="org">Einrichtung</label><span class="req"> *</span
-						><br />
+						<label for="org">{{contact.form.org}}</label
+						><span class="req"> *</span><br />
 						<select id="org" name="org" required>
-							<option value="company">Unternehmen</option>
-							<option value="authority">Öffentliche Behörde</option>
-							<option value="org">Hilfsorganisation</option>
-							<option value="ind">Privatperson</option>
+							<option value="company">
+								{{contact.form.org.option.company}}
+							</option>
+							<option value="authority">
+								{{contact.form.org.option.authority}}
+							</option>
+							<option value="charity">
+								{{contact.form.org.option.charity}}
+							</option>
+							<option value="individual">
+								{{contact.form.org.option.individual}}
+							</option>
 						</select>
 					</div>
 					<div>
-						<label for="email">E-Mail Adresse</label><span class="req"> *</span
-						><br />
+						<label for="email">{{contact.form.email}}</label
+						><span class="req"> *</span><br />
 						<input type="email" id="email" name="email" required />
 					</div>
 				</fieldset>
 
 				<!-- Content fieledset -->
 				<div class="fill-h">
-					<label for="subj">Betreff</label><span class="req"> *</span><br />
+					<label for="subj">{{contact.form.subject}}</label
+					><span class="req"> *</span><br />
 					<input type="text" id="subj" name="subject" required /><br />
 				</div>
 
 				<div class="fill-h">
-					<label for="mess">Nachricht</label><span class="req"> *</span><br />
+					<label for="mess">{{contact.form.message}}</label
+					><span class="req"> *</span><br />
 					<textarea
 						id="mess"
 						name="message"
@@ -83,19 +97,18 @@
 
 				<div class="fill-h">
 					<input type="checkbox" id="newsletter" name="newsletter" />
-					<label for="newsletter"
-						>Ich möchte zukünftlich per E-Mail über Neuigkeiten und Angebote
-						informiert werden.</label
-					>
+					<label for="newsletter">{{contact.form.newsletter}}</label>
 				</div>
 
 				<div class="fill-h">
-					<input type="submit" /><span id="err"
-						>Bitte füllen sie alle erforderlichen Felder aus.</span
+					<input type="submit" value="{{contact.form.submit}}" /><span id="err"
+						>{{contact.form.hint}}</span
 					>
 				</div>
 
-				<p class="fill-h"><span class="req">*</span> -Erforderliches Feld</p>
+				<p class="fill-h">
+					<span class="req">*</span> -{{contact.form.required}}
+				</p>
 			</form>
 		</main>
 

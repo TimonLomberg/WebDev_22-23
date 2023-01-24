@@ -50,6 +50,7 @@ function initLocale() {
         result = xmlhttp.responseText;
     }
 
+    //Fallback to english
     if(result === '') {
         xmlhttp = new XMLHttpRequest();
         xmlhttp.open("GET", 'en.lang', false);
