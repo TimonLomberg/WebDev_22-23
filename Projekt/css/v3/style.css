@@ -61,3 +61,85 @@ body {
 }
 
 
+
+/* Mobile Navigation Menu Button*/
+
+#mnav-button {
+    position: fixed;
+    height: 100vh;
+    min-width: 20vw;
+
+    padding-right: 1rem;
+
+    display: flex;
+    align-items: flex-start;
+
+    z-index: 1000;
+    
+    transition: clip-path 0.8s ease;
+    background-color: green;
+
+    --clip-pos: 2.5rem calc(75vh + 1.5rem);
+}
+
+#mnav-button[data-expanded="false"] {
+    clip-path: circle(2.5rem at var(--clip-pos));
+}
+
+#mnav-button[data-expanded="true"] {
+
+    clip-path: circle(max(min(150%, 150vw), 150vh) at var(--clip-pos));
+}
+
+#mnav-button[data-mdown="true"] {
+    transition: clip-path 0s;
+}
+
+#mnav-button > img {
+    display: block;
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    width: 3rem;
+    height: auto;
+
+    z-index: 1000;
+
+    margin-bottom: 1rem;
+    margin-top: 75vh
+}
+
+#mnav-button > ul {
+    width: 100%;
+
+    background-color: green;
+
+    display: flex;
+    flex-flow: column;
+    align-items: stretch;
+    justify-content: space-evenly;
+}
+
+#mnav-button[data-expanded="true"] ul {
+    position: static;
+    top: 0;
+}
+
+.mnav-item {
+    list-style: none;
+    display: block;
+
+    margin-left: 2rem;
+}
+
+.mnav-item > a {
+    font-size: 2rem;
+}
+
+
+@media only screen and (max-width: 850px) {
+    
+    #mnav-button {
+        width: 100vw;
+    }
+}

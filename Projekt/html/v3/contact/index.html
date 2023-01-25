@@ -8,12 +8,33 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>Kontakt</title>
 
-		<link rel="stylesheet" href="../../../css/v3/style.css" />
-		<link rel="stylesheet" href="../../../css/v3/contact.css" />
+		<link rel="stylesheet" href="/Projekt/css/v3/style.css" />
+		<link rel="stylesheet" href="/Projekt/css/v3/contact.css" />
 
-		<script src="../../../js/localization.js"></script>
+		<script src="/Projekt/js/localization.js" defer></script>
+		<script src="/Projekt/js/global-scripts.js"></script>
 	</head>
 	<body>
+		<nav id="mnav-button" class="text-rec testing" data-expanded="false">
+			<img
+				id="mnav-img"
+				src="/Projekt/resources/images/burger.svg"
+				alt="Menu"
+				width="50" />
+			<ul class="fill-v">
+				<li class="mnav-item"><a href="/Projekt/html/v3/">{{mnav.home}}</a></li>
+				<li class="mnav-item">
+					<a href="/Projekt/html/v3/services/">{{mnav.products}}</a>
+				</li>
+				<li class="mnav-item">
+					<a href="/Projekt/html/v3/about/">{{mnav.about}}</a>
+				</li>
+				<li class="mnav-item">
+					<a href="/Projekt/html/v3/contact/">{{mnav.contact}}</a>
+				</li>
+			</ul>
+		</nav>
+
 		<!-- Logo and title region -->
 		<header class="testing text" id="head">HEADER</header>
 

@@ -16,3 +16,8 @@ contact.form.newsletter=Ich will in Zukunft per E-Mail über Neuigkeiten und Ang
 contact.form.submit=Absenden
 contact.form.hint=Bitte füllen sie alle erforderlichen Felder korrekt aus.
 contact.form.required=Erforderliches Feld
+
+mnav.home=Startseite
+mnav.products=Produkte
+mnav.about=Über Uns
+mnav.contact=Kontakt

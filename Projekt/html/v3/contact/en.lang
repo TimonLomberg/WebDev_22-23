@@ -16,3 +16,8 @@ contact.form.newsletter=I want to receive e-mails for future news and special of
 contact.form.submit=Send
 contact.form.hint=Please fill in all required fields correctly.
 contact.form.required=Required
+
+mnav.home=Home
+mnav.products=Products
+mnav.about=About Us
+mnav.contact=Contact

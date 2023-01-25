@@ -10,6 +10,7 @@ body {
             rgba(var(--accent-color), 40%)
     );
     display: flex;
+    align-items: flex-start;
 }
 
 
@@ -36,4 +37,20 @@ body {
     color: var(--h2-font-color);
     font-size: 5vh;
     user-select: none;
+}
+
+#side-area {
+
+    flex-grow: 1;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 4rem;
+
+}
+
+#site-logo {
+    margin: 3rem;
+    width: min(20vw, 400px);
 }

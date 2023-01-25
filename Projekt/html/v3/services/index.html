@@ -1,114 +1,149 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Services</title>
-    <link rel="stylesheet" href="../../../css/v3/style.css">
-    <link rel="stylesheet" href="../../../css/v3/services.css">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Services</title>
+		<link rel="stylesheet" href="../../../css/v3/style.css" />
+		<link rel="stylesheet" href="../../../css/v3/services.css" />
 
-    <script src="../../../js/services.js"></script>
+		<script src="/Projekt/js/services.js"></script>
+		<script src="/Projekt/js/global-scripts.js"></script>
+		<script src="/Projekt/js/localization.js" defer></script>
+	</head>
+	<body>
+		<nav id="mnav-button" class="text-rec testing" data-expanded="false">
+			<img
+				id="mnav-img"
+				src="/Projekt/resources/images/burger.svg"
+				alt="Menu"
+				width="50" />
+			<ul class="fill-v">
+				<li class="mnav-item"><a href="/Projekt/html/v3/">{{mnav.home}}</a></li>
+				<li class="mnav-item">
+					<a href="/Projekt/html/v3/services/">{{mnav.products}}</a>
+				</li>
+				<li class="mnav-item">
+					<a href="/Projekt/html/v3/about/">{{mnav.about}}</a>
+				</li>
+				<li class="mnav-item">
+					<a href="/Projekt/html/v3/contact/">{{mnav.contact}}</a>
+				</li>
+			</ul>
+		</nav>
 
-</head>
-<body>
+		<header id="services-header" class="fill-h text testing">
+			<img
+				id="logo-img"
+				src="../../../resources/images/leaf-small.png"
+				alt="logo" />
+			<h1 id="logo-text" class="text">YARD</h1>
+		</header>
+		<main id="services-main" class="fill-h testing" data-anySelected="false">
+			<div class="service-category fill-v testing" data-selected="false">
+				<div class="service-category-image">
+					<img
+						class="service-image-big"
+						src="../../../resources/images/leaf-big.jpg"
+						alt="Kategorie 1" />
+					<img
+						class="service-image-small"
+						src="../../../resources/images/leaf-small.png"
+						alt="Kategorie 1" />
+				</div>
 
+				<h2 class="service-category-title">Kategorie 1</h2>
 
-<header id="services-header" class="fill-h text testing">
-    <img id="logo-img" src="../../../resources/images/leaf-small.png" alt="logo">
-    <h1 id="logo-text" class="text">YARD</h1>
-</header>
-<main id="services-main" class="fill-h testing" data-anySelected="false">
-    <div class="service-category fill-v testing" data-selected="false">
-        <div class="service-category-image">
-            <img class="service-image-big" src="../../../resources/images/leaf-big.jpg" alt="Kategorie 1">
-            <img class="service-image-small" src="../../../resources/images/leaf-small.png" alt="Kategorie 1">
-        </div>
+				<article class="service-article text-rec testing">
+					<header class="service-article-title testing">
+						<h2>daafswsaf</h2>
+					</header>
+					<p class="service-article-text">
+						Some Text Some Text Some Text Some Text Some Text Some Text Some
+						Text Some Text Some Text Some Text Some Text Some Text Some Text
+						Some Text Some Text
+					</p>
+				</article>
+			</div>
+			<div class="service-category fill-v testing" data-selected="false">
+				<div class="service-category-image">
+					<img
+						class="service-image-big"
+						src="../../../resources/images/leaf-big.jpg"
+						alt="Kategorie 1" />
+					<img
+						class="service-image-small"
+						src="../../../resources/images/leaf-small.png"
+						alt="Kategorie 1" />
+				</div>
 
-        <h2 class="service-category-title">Kategorie 1</h2>
+				<h2 class="service-category-title">Kategorie 2</h2>
 
-        <article class="service-article text-rec testing">
-            <header class="service-article-title testing">
-                <h2>
-                    daafswsaf
-                </h2>
-            </header>
-            <p class="service-article-text">
-                Some Text Some Text Some Text Some Text Some Text Some Text Some Text Some Text Some Text
-                Some Text Some Text Some Text Some Text Some Text Some Text
-            </p>
+				<article class="service-article text-rec testing">
+					<header class="service-article-title testing">
+						<h2>daafswsaf</h2>
+					</header>
+					<p class="service-article-text">
+						Some Text Some Text Some Text Some Text Some Text Some Text Some
+						Text Some Text Some Text Some Text Some Text Some Text Some Text
+						Some Text Some Text
+					</p>
+				</article>
+			</div>
+			<div class="service-category fill-v testing" data-selected="false">
+				<div class="service-category-image">
+					<img
+						class="service-image-big"
+						src="../../../resources/images/leaf-big.jpg"
+						alt="Kategorie 1" />
+					<img
+						class="service-image-small"
+						src="../../../resources/images/leaf-small.png"
+						alt="Kategorie 1" />
+				</div>
 
-        </article>
-    </div>
-    <div class="service-category fill-v testing" data-selected="false">
-        <div class="service-category-image">
-            <img class="service-image-big" src="../../../resources/images/leaf-big.jpg" alt="Kategorie 1">
-            <img class="service-image-small" src="../../../resources/images/leaf-small.png" alt="Kategorie 1">
-        </div>
+				<h2 class="service-category-title">Kategorie 3</h2>
 
-        <h2 class="service-category-title">Kategorie 2</h2>
+				<article class="service-article text-rec testing">
+					<header class="service-article-title testing">
+						<h2>daafswsaf</h2>
+					</header>
+					<p class="service-article-text">
+						Some Text Some Text Some Text Some Text Some Text Some Text Some
+						Text Some Text Some Text Some Text Some Text Some Text Some Text
+						Some Text Some Text
+					</p>
+				</article>
+			</div>
+			<div class="service-category fill-v testing" data-selected="false">
+				<div class="service-category-image">
+					<img
+						class="service-image-big"
+						src="../../../resources/images/leaf-big.jpg"
+						alt="Kategorie 1" />
+					<img
+						class="service-image-small"
+						src="../../../resources/images/leaf-small.png"
+						alt="Kategorie 1" />
+				</div>
 
-        <article class="service-article text-rec testing">
-            <header class="service-article-title testing">
-                <h2>
-                    daafswsaf
-                </h2>
-            </header>
-            <p class="service-article-text">
-                Some Text Some Text Some Text Some Text Some Text Some Text Some Text Some Text Some Text
-                Some Text Some Text Some Text Some Text Some Text Some Text
-            </p>
+				<h2 class="service-category-title">Kategorie 4</h2>
 
-        </article>
-    </div>
-    <div class="service-category fill-v testing" data-selected="false">
-        <div class="service-category-image">
-            <img class="service-image-big" src="../../../resources/images/leaf-big.jpg" alt="Kategorie 1">
-            <img class="service-image-small" src="../../../resources/images/leaf-small.png" alt="Kategorie 1">
-        </div>
-
-        <h2 class="service-category-title">Kategorie 3</h2>
-
-        <article class="service-article text-rec testing">
-            <header class="service-article-title testing">
-                <h2>
-                    daafswsaf
-                </h2>
-            </header>
-            <p class="service-article-text">
-                Some Text Some Text Some Text Some Text Some Text Some Text Some Text Some Text Some Text
-                Some Text Some Text Some Text Some Text Some Text Some Text
-            </p>
-
-        </article>
-    </div>
-    <div class="service-category fill-v testing" data-selected="false">
-        <div class="service-category-image">
-            <img class="service-image-big" src="../../../resources/images/leaf-big.jpg" alt="Kategorie 1">
-            <img class="service-image-small" src="../../../resources/images/leaf-small.png" alt="Kategorie 1">
-        </div>
-
-        <h2 class="service-category-title">Kategorie 4</h2>
-
-        <article class="service-article text-rec testing">
-            <header class="service-article-title testing">
-                <h2>
-                    daafswsaf
-                </h2>
-            </header>
-            <p class="service-article-text">
-                Some Text Some Text Some Text Some Text Some Text Some Text Some Text Some Text Some Text
-                Some Text Some Text Some Text Some Text Some Text Some Text
-            </p>
-
-        </article>
-    </div>
-</main>
-<footer id="services-footer" class="fill-h testing">
-footer
-</footer>
-
-
-</body>
+				<article class="service-article text-rec testing">
+					<header class="service-article-title testing">
+						<h2>daafswsaf</h2>
+					</header>
+					<p class="service-article-text">
+						Some Text Some Text Some Text Some Text Some Text Some Text Some
+						Text Some Text Some Text Some Text Some Text Some Text Some Text
+						Some Text Some Text
+					</p>
+				</article>
+			</div>
+		</main>
+		<footer id="services-footer" class="fill-h testing">footer</footer>
+	</body>
 </html>
