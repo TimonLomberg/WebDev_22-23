@@ -6,7 +6,7 @@
 			name="viewport"
 			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Kontakt</title>
+		<title>Yard</title>
 
 		<link rel="stylesheet" href="/Projekt/css/v3/style.css" />
 		<link rel="stylesheet" href="/Projekt/css/v3/contact.css" />
@@ -15,7 +15,7 @@
 		<script src="/Projekt/js/global-scripts.js"></script>
 	</head>
 	<body>
-		<nav id="mnav-button" class="text-rec testing" data-expanded="false">
+		<nav id="mnav-button" class="text-rec" data-expanded="false">
 			<img
 				id="mnav-img"
 				src="/Projekt/resources/images/burger.svg"
@@ -32,11 +32,23 @@
 				<li class="mnav-item">
 					<a href="/Projekt/html/v3/contact/">{{mnav.contact}}</a>
 				</li>
+				<li class="mnav-item">
+					<select name="language" id="mnav-language">
+						<option value="en">🇬🇧 {{mnav.language.en}}</option>
+						<option value="de">🇩🇪 {{mnav.language.de}}</option>
+					</select>
+				</li>
 			</ul>
 		</nav>
 
 		<!-- Logo and title region -->
-		<header class="testing text" id="head">HEADER</header>
+		<header id="side-area" class="text-rec">
+			<img
+				id="site-logo"
+				src="/Projekt/resources/images/logo.svg"
+				alt="Logo"
+				width="400" />
+		</header>
 
 		<!-- Center main region -->
 		<main id="contact">
@@ -48,8 +60,11 @@
 				<p>{{contact.info.text}}</p>
 			</article>
 			<!-- Contact form region -->
-			<form id="contact-form" method="post" class="text-rec testing">
+			<form id="contact-form" method="post" class="text-rec">
 				<h2 id="form-head" class="fill-h">{{contact.form.title}}</h2>
+				<p class="fill-h">
+					<span class="req">*</span> -{{contact.form.required}}
+				</p>
 
 				<!-- Name filedset -->
 				<fieldset class="form-seg">
@@ -126,14 +141,18 @@
 						>{{contact.form.hint}}</span
 					>
 				</div>
-
-				<p class="fill-h">
-					<span class="req">*</span> -{{contact.form.required}}
-				</p>
 			</form>
 		</main>
 
-		<!-- Global information region -->
-		<footer class="testing text" id="foot">WaftpOIUHG</footer>
+		<!-- Global footer region -->
+		<footer class="text-rec" id="page-footer">
+			<p id="footer-nav">
+				<a href="#">{{pfooter.cookie_policy}}</a
+				><span class="footer-divider"> | </span
+				><a href="#">{{pfooter.privacy}}</a
+				><span class="footer-divider"> | </span
+				><a href="#">{{pfooter.legal}}</a>
+			</p>
+		</footer>
 	</body>
 </html>

@@ -13,27 +13,6 @@ body {
     overflow: hidden;
 }
 
-#services-header {
-    flex-grow: 1;
-
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap:2rem;
-
-    padding: 0 2rem 0 2rem;
-}
-
-#logo-img {
-    width: 5rem;
-    height: auto;
-}
-
-#logo-text {
-    display: inline-block;
-    font-size: var(--logo-font-size);
-}
-
 #services-footer {
     flex-grow: 1;
 }
@@ -59,13 +38,17 @@ body {
 
     overflow-x: clip;
 
-    min-width: 12%;
+    width: 12%;
     margin: 0 1rem 0 1rem;
     padding: 0 0.5rem 0 0.5rem;
 
+    border: 1px rgb(var(--accent-color)) solid;
     border-radius: 3rem;
+    box-shadow: 6px 6px rgba(0, 0, 0, 60%);
 
-    transition: flex-grow 400ms ease-in-out, min-width 300ms ease-in-out;;
+
+
+    transition: flex-grow 400ms ease-in-out, width 300ms ease-in-out, background-image 400ms ease-in;
 }
 
 .service-category-image {
@@ -84,9 +67,6 @@ body {
     justify-content: center;
 }
 
-.service-image-small {
-
-}
 
 .service-image-big {
 
@@ -130,6 +110,12 @@ body {
     flex-grow: 1;
 }
 
+
+/* Interaction behaviour */
+
+
+
+
 .service-category[data-selected="false"] .service-article{
     visibility: collapse;
     position: absolute;
@@ -147,9 +133,18 @@ body {
     opacity: 0;
 }
 
+.service-category:hover{
+    background-image: linear-gradient(
+            180deg,
+            rgba(0,0,0,0) 90%,
+            98%,
+            rgba(var(--accent-color), 80%)
+    );
+}
+
 
 #services-main[data-any-selected="true"] .service-category[data-selected="false"]{
-    min-width: 8%;
+    width: 8%;
 }
 #services-main[data-any-selected="true"] .service-category[data-selected="false"] > .service-category-image{
     flex-grow: 1;
@@ -188,4 +183,61 @@ body {
 .service-category[data-selected="true"] .service-image-big, .service-category[data-selected="false"] .service-image-small{
     width: 100%;
     height: auto;
+}
+
+
+/* Phone layout */
+
+@media only screen and (max-width: 1200px){ 
+
+
+    body {
+        overflow: auto;
+    }
+
+    #services-main {
+        flex-flow: column;
+        height: auto;
+
+        gap: 5vh;
+
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .service-category{
+        flex-flow: row nowrap;
+    
+        height: 20vh;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    
+        border-radius: 3rem;
+    
+        transition: flex-grow 400ms ease-in-out, width 300ms ease-in-out;;
+    }
+
+
+    .service-category-image {
+        height: auto;   
+    
+    
+        width: var(--small-img-width);
+    
+    
+        transition: 0;
+    
+        display: block;
+        flex-flow: unset;
+        align-items: unset;
+        justify-content: unset;
+    }
+
+    .service-category-title{
+        text-align: center;
+        font-size: 2.4rem;
+    
+    }
+
 }

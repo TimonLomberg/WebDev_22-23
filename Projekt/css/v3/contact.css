@@ -115,8 +115,6 @@ form:invalid #err {
 
     #contact {
         flex-direction: column;
-        position: relative;
-        top: 12vh;
     }
 
     #info {
@@ -136,11 +134,6 @@ form:invalid #err {
         position: fixed;
         width: 100%;
         z-index: 100;
-    }
-
-    #foot {
-        position: relative;
-        bottom: -12vh;
     }
 
 }

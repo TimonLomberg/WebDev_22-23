@@ -21,3 +21,9 @@ mnav.home=Startseite
 mnav.products=Produkte
 mnav.about=Über Uns
 mnav.contact=Kontakt
+mnav.language.en=En
+mnav.language.de=De
+
+pfooter.cookie_policy=COOKIE-RICHTLINIE
+pfooter.privacy=PRIVATSPHÄRE
+pfooter.legal=RECHTLICHES

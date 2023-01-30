@@ -1,14 +1,19 @@
 document.addEventListener("DOMContentLoaded", OnDOMLoaded);
 
 function OnDOMLoaded() {
-	//makeElementDrag(document.getElementById("mnav-button"), document.getElementById("mnav-button").getElementsByTagName("img")[0]);
 	makeElementDrag(document.getElementById("mnav-img"));
-	//document.getElementById("mnav-img").onclick = navClicked;
+
+	let langButton = document.getElementById("mnav-language");
+
+	langButton.value = window.localStorage.getItem("lang") ?? "en";
+
+	langButton.onchange = (e) => {
+		window.localStorage.setItem("lang", langButton.value);
+		location.reload();
+	};
 }
 
 function navClicked(e) {
-	/* document.getElementById("mnav-button").style.clipPath =
-		"circle(150% at 10% calc(75vh + 4%))"; */
 	let element = document.getElementById("mnav-button");
 	if (element.dataset.expanded === "true") {
 		element.dataset.expanded = "false";
@@ -25,12 +30,14 @@ function makeElementDrag(dragElement) {
 
 	let startY = 0;
 
+	let mnav = document.getElementById("mnav-button");
+
 	dragElement.touchstart = dragElement.onmousedown = (x) => {
 		x.preventDefault();
 		oldPosY = x.clientY;
 		startY = oldPosY;
 
-		document.getElementById("mnav-button").dataset.mdown = "true";
+		mnav.dataset.mdown = "true";
 
 		document.touchend = document.onmouseup = (x) => {
 			if (Math.abs(startY - x.clientY) < 2) {
@@ -39,14 +46,18 @@ function makeElementDrag(dragElement) {
 			document.touchend = document.onmouseup = null;
 			document.touchmove = document.onmousemove = null;
 
-			document.getElementById("mnav-button").dataset.mdown = "false";
+			mnav.dataset.mdown = "false";
 		};
 		document.touchmove = document.onmousemove = (x) => {
 			x.preventDefault();
 			newPosY = oldPosY - x.clientY;
 			oldPosY = x.clientY;
 
-			dragElement.style.marginTop = dragElement.offsetTop - newPosY + "px";
+			dragElement.style.marginTop =
+				Math.min(
+					mnav.clientHeight - mnav.clientHeight / 20,
+					Math.max(0, dragElement.offsetTop - newPosY)
+				) + "px";
 
 			document
 				.getElementById("mnav-button")

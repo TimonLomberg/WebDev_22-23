@@ -17,7 +17,8 @@
 
     --text-color: white;
     --bg-color: rgb(20, 20, 20);
-    --accent-color: 144, 246, 118;
+    --bg-color-val: 20, 20, 20;
+    --accent-color: 61, 194, 0;
     --h2-font-color: rgb(199, 199, 199);
 
     --golden: 60.81%
@@ -60,7 +61,44 @@ body {
     display: inline-block;
 }
 
+/* Logo */
 
+
+#side-area {
+
+    flex-grow: 1;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+#site-logo {
+    margin: 3rem;
+    margin-right: 6rem;
+    margin-bottom: 1rem;
+    width: min(20vw, 400px);
+}
+
+/* Footer */
+
+#page-footer {
+    min-height: 10vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} 
+
+#footer-nav {
+    text-align: center;
+    margin: 2rem;
+}
+
+.footer-divider {
+    font-size: 2em;
+}
 
 /* Mobile Navigation Menu Button*/
 
@@ -69,17 +107,18 @@ body {
     height: 100vh;
     min-width: 20vw;
 
-    padding-right: 1rem;
-
     display: flex;
     align-items: flex-start;
 
     z-index: 1000;
+
+    mask: url(/Projekt/resources/images/mnav-clip.svg#shape0);
+
     
     transition: clip-path 0.8s ease;
     background-color: green;
 
-    --clip-pos: 2.5rem calc(75vh + 1.5rem);
+    --clip-pos: 2.5rem calc(5vh + 1.5rem);
 }
 
 #mnav-button[data-expanded="false"] {
@@ -106,12 +145,15 @@ body {
     z-index: 1000;
 
     margin-bottom: 1rem;
-    margin-top: 75vh
+    margin-top: 5vh
 }
 
 #mnav-button > ul {
     width: 100%;
 
+    margin-right: 3rem;
+
+    
     background-color: green;
 
     display: flex;
@@ -132,8 +174,22 @@ body {
     margin-left: 2rem;
 }
 
-.mnav-item > a {
+.mnav-item > a, .mnav-item option, .mnav-item select {
     font-size: 2rem;
+}
+
+.mnav-item select {
+    color: var(--text-color);
+}
+
+.mnav-item option {
+    color: black;
+}
+
+
+#mnav-language {
+    background: none;
+    border: none;
 }
 
 
@@ -141,5 +197,14 @@ body {
     
     #mnav-button {
         width: 100vw;
+
+        mask: none;
+    }
+
+    #site-logo {
+        margin-left: auto;
+        margin-right: auto;
+
+        width: 50%;
     }
 }

@@ -1,0 +1,28 @@
+mnav.home=Home
+mnav.products=Products
+mnav.about=About Us
+mnav.contact=Contact
+mnav.language.en=En
+mnav.language.de=Ger
+
+pfooter.cookie_policy=COOKIE POLICY
+pfooter.privacy=PRIVACY
+pfooter.legal=LEGAL
+
+services.learn-more=Learn more...
+
+services.greening.category-title=Greening
+services.greening.article.title=Wir vergrünern ihre Gebäude
+services.greening.article.text=Bla Bla Bla...
+
+services.cat2.category-title=Katergorie 2
+services.cat2.article.title=Wir vergrünern ihre Gebäude
+services.cat2.article.text=Bla Bla Bla...
+
+services.cat3.category-title=Katergorie 3
+services.cat3.article.title=Wir vergrünern ihre Gebäude
+services.cat3.article.text=Bla Bla Bla...
+
+services.cat4.category-title=Katergorie 4
+services.cat4.article.title=Wir vergrünern ihre Gebäude
+services.cat4.article.text=Bla Bla Bla...
