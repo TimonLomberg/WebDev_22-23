@@ -1,56 +1,113 @@
 :root {
-    --nav-text-size: 3rem;
+    --normal-font-color: rgb(199, 199, 199);
+    --dark-font-color: rgb(61, 61, 61);
 }
+
+.text, .text-rec * {
+    font-weight: 350;
+}
+
 
 body {
-    background-image: linear-gradient(
-            to bottom right,
-            rgba(0,0,0,0) 60%,
-            75%,
-            rgba(var(--accent-color), 40%)
-    );
     display: flex;
     align-items: flex-start;
+    overflow: hidden;
 }
 
+main {
+    min-width: var(--golden);
+    display: inline;
+
+    order: -1;
+}
 
 #nav-landing {
-    display: flex;
+    display: inline-flex;
     flex-flow: column;
     justify-content: center;
     align-items: flex-start;
 
-    padding: 0 0 0 20%;
-    gap: 10%;
+    margin-left: 20%;
+    margin-right: auto;
+    gap: 5rem;
+
+
 }
 
 .nav-landing-item {
-    display: inline;
-    min-height: var(--nav-text-size);
-    vertical-align: middle;
-    line-height: var(--nav-text-size);
 
-
+    transition: opacity 300ms ease-out;
 }
 
 .nav-landing-item a{
-    color: var(--h2-font-color);
-    font-size: 5vh;
+    color: var(--normal-font-color);
     user-select: none;
-}
 
-#side-area {
-
-    flex-grow: 1;
-
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 4rem;
-
+    font-size: 3rem;
 }
 
 #site-logo {
-    margin: 3rem;
-    width: min(20vw, 400px);
+    width: 25vw;
+}
+
+h1 {
+    font-size: 0;
+}
+
+
+#side-color {
+    
+    position: absolute;
+    top: 0;
+    right: 25vw;
+
+
+    z-index: -1;
+    
+    min-height: 100vh;
+    min-width: 100vh;
+
+
+    background-color: rgb(var(--accent-color));
+
+    mask: url(/Projekt/resources/images/vine-mask.svg#shape0);
+    mask-size: contain;
+
+}
+
+#side-fill {
+
+    position: absolute;
+    top: 0;
+    right: 0vw;
+
+    z-index: -1;
+
+    min-height: 100vh;
+    min-width: 25vw;
+
+    background-color: rgb(var(--accent-color));
+}
+
+
+/* Interactions */
+
+#nav-landing:hover > .nav-landing-item:not(:hover){
+    opacity: 0.3;
+}
+
+
+
+@media only screen and (max-width: 850px) {
+    
+    body {
+        flex-direction: row;
+    }
+
+    #head {
+        position: fixed;
+        width: 100%;
+        z-index: 100;
+    }
+
 }

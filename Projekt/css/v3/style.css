@@ -1,3 +1,19 @@
+@font-face {
+    font-family: IbarraRealNova;
+    src: url(/Projekt/resources/fonts/ibarra_real_nova-variable_font_wght.ttf);
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url(/Projekt/resources/fonts/Nunito/nunito-variable_wght.ttf);
+}
+
+@font-face {
+    font-family: NunitoRegular;
+    src: url(/Projekt/resources/fonts/Nunito/static/nunito-regular.ttf);
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -5,12 +21,8 @@
     color: var(--text-color);
 }
 
-* :not(.text, .text-rec *) {
-    font-size: 0;
-}
-
 .text, .text-rec *{
-    font-size: 1rem;
+    font-family: 'Nunito', 'NunitoRegular', sans-serif;
 }
 
 :root {
@@ -19,7 +31,8 @@
     --bg-color: rgb(20, 20, 20);
     --bg-color-val: 20, 20, 20;
     --accent-color: 61, 194, 0;
-    --h2-font-color: rgb(199, 199, 199);
+    --accent-color-rgb: rgb(var(--accent-color));
+    
 
     --golden: 60.81%
 }
@@ -40,15 +53,8 @@ body {
     background-color: var(--bg-color);
 }
 
-
-
-
-.golden-horizontal-big {
-    width: var(--golden);
-}
-
-.golden-horizontal-small {
-    flex-grow: 1;
+.fill-h {
+    width: 100%;
 }
 
 .fill-v {
@@ -56,13 +62,8 @@ body {
     display: inline-block;
 }
 
-.fill-h {
-    width: 100%;
-    display: inline-block;
-}
 
 /* Logo */
-
 
 #side-area {
 

@@ -1,0 +1,104 @@
+
+body {
+    display: flex;
+    flex-flow: row;
+    height: fit-content;
+
+    overflow-x: hidden;
+}
+
+#left-bg, #right-bg {
+
+    min-width: 20vw;
+    min-height: 100%;
+
+    background-image: url(/Projekt/resources/images/building-bright.svg);
+    background-size: contain;
+    background-repeat: repeat-y;
+
+    opacity: 80%;
+
+    border: 0;
+}
+
+#right-bg {
+    transform: scaleX(-1);
+    background-position: 0 25vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
+article {
+
+    margin: 10vh 0;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+
+    gap: 25vh;
+}
+
+#title *{
+    text-align: center;
+    font-size: 8vw;
+    font-weight: 850;
+    color: rgb(var(--accent-color));    
+}
+
+section:nth-child(2) > img {
+    order: 1;
+}
+
+section {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    gap: 3rem;
+
+    padding: 0 2rem;
+}
+
+section > h2 {
+    min-width: 100%;
+
+    text-align: center;
+    font-size: 6vw;
+    font-weight: 700;
+}
+
+section > img {
+    width: 33%;
+}
+
+section > p {
+    width: 300px;
+    flex-grow: 1;
+
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 850px) {
+
+    section > img {
+        display: none;
+    }
+
+    #left-bg {
+        position: absolute;
+        z-index: -1;
+
+        background-image: url(/Projekt/resources/images/building-dark.svg);
+        opacity: 1;
+    }
+
+    #right-bg {
+        display: none;
+    }
+}

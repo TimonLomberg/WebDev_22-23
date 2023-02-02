@@ -1,21 +1,35 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta
 			name="viewport"
 			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Landing v3</title>
+		<title>Yard</title>
+
+		<link
+			rel="shortcut icon"
+			href="/Projekt/resources/images/logo-ico.ico"
+			type="image/x-icon" />
 
 		<link rel="stylesheet" href="/Projekt/css/v3/style.css" />
 		<link rel="stylesheet" href="/Projekt/css/v3/landing.css" />
+
 		<script src="/Projekt/js/global-scripts.js"></script>
 		<script src="/Projekt/js/localization.js" defer></script>
 	</head>
 	<body>
-		<main class="golden-horizontal-big fill-v">
-			<nav id="nav-landing" class="fill-v fill-h text-rec">
+		<h1>Yard</h1>
+		<header id="side-area" class="text-rec">
+			<img
+				id="site-logo"
+				src="/Projekt/resources/images/logo-static.webp"
+				alt="Logo"
+				width="400" />
+		</header>
+		<main class="fill-v">
+			<nav id="nav-landing" class="fill-v text-rec">
 				<h2 class="nav-landing-item">
 					<a href="/Projekt/html/v3/">{{landing.nav.home}}</a>
 				</h2>
@@ -23,19 +37,11 @@
 					<a href="/Projekt/html/v3/services/">{{landing.nav.products}}</a>
 				</h2>
 				<h2 class="nav-landing-item">
-					<a href="#">{{landing.nav.about}}</a>
-				</h2>
-				<h2 class="nav-landing-item">
 					<a href="/Projekt/html/v3/contact/">{{landing.nav.contact}}</a>
 				</h2>
 			</nav>
 		</main>
-		<aside id="side-area" class="text-rec">
-			<img
-				id="site-logo"
-				src="/Projekt/resources/images/logo.svg"
-				alt="Logo"
-				width="400" />
-		</aside>
+		<div id="side-color" class=""></div>
+		<div id="side-fill" class=""></div>
 	</body>
 </html>

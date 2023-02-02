@@ -30,6 +30,8 @@ body {
 #contact-form {
     min-width: 60.81%;
     width: 60.81%;
+    height: 100vh;
+
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;

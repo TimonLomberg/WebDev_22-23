@@ -6,11 +6,71 @@
 			name="viewport"
 			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Document</title>
+		<title>Yard</title>
+
+		<link
+			rel="shortcut icon"
+			href="/Projekt/resources/images/logo-ico.ico"
+			type="image/x-icon" />
 
 		<link rel="stylesheet" href="/Projekt/css/v3/style.css" />
+		<link rel="stylesheet" href="/Projekt/css/v3/services/greening.css" />
+
 		<script src="/Projekt/js/localization.js" defer></script>
 		<script src="/Projekt/js/global-scripts.js"></script>
 	</head>
-	<body></body>
+	<body class="">
+		<!-- Movable navigation menu -->
+		<nav id="mnav-button" class="text-rec" data-expanded="false">
+			<img
+				id="mnav-img"
+				src="/Projekt/resources/images/burger.svg"
+				alt="Menu"
+				width="50" />
+			<ul class="fill-v">
+				<li class="mnav-item"><a href="/Projekt/html/v3/">{{mnav.home}}</a></li>
+				<li class="mnav-item">
+					<a href="/Projekt/html/v3/services/">{{mnav.products}}</a>
+				</li>
+
+				<li class="mnav-item">
+					<a href="/Projekt/html/v3/contact/">{{mnav.contact}}</a>
+				</li>
+				<li class="mnav-item">
+					<select name="language" id="mnav-language">
+						<option value="en">🇬🇧 {{mnav.language.en}}</option>
+						<option value="de">🇩🇪 {{mnav.language.de}}</option>
+					</select>
+				</li>
+			</ul>
+		</nav>
+
+		<div id="left-bg" class=""></div>
+		<main class="">
+			<article class="text-rec">
+				<header id="title" class="">
+					<h1 class="">{{greening.title}}</h1>
+				</header>
+
+				<section class="">
+					<h2 class="">{{greening.section1.title}}</h2>
+					<img
+						src="/Projekt/resources/images/leaf-big.jpg"
+						alt="Section1 Picture"
+						width="300" />
+					<p class="">{{greening.section1.text}}</p>
+				</section>
+
+				<section class="">
+					<h2 class="">{{greening.section2.title}}</h2>
+					<img
+						src="/Projekt/resources/images/leaf-big.jpg"
+						alt="Section1 Picture"
+						width="300" />
+					<p class="">{{greening.section2.text}}</p>
+				</section>
+			</article>
+		</main>
+		<div id="right-bg" class=""></div>
+	</body>
 </html>
